@@ -4,6 +4,12 @@
     "dev-server": "webpack-dev-server --content-base --config webpack-dev-server.config.js --progress --colors --port 2992 --inline"
   },
   "dependencies": {
+    "@angular/common": "^2.4.1",
+    "@angular/compiler": "^2.4.1",
+    "@angular/core": "^2.4.1",
+    "@angular/forms": "^2.4.1",
+    "@angular/platform-browser": "^2.4.1",
+    "@angular/platform-browser-dynamic": "^2.4.1",
     "babel-core": "^5.0.12",
     "babel-loader": "^5.0.0",
     "classnames": "^2.1.5",
@@ -17,11 +23,14 @@
     "markdown-loader": "^0.1.2",
     "null-loader": "^0.1.0",
     "react": "^0.13.3",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.0.2",
     "style-loader": "^0.12.0",
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.1",
     "url-loader": "^0.5.5",
     "webpack": "^1.8.5",
-    "webpack-dev-server": "^1.4.7"
+    "webpack-dev-server": "^1.4.7",
+    "zone.js": "^0.7.4"
   }
 }

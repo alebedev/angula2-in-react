@@ -150,6 +150,9 @@ export default class TodoApp extends React.Component {
         );
     }
 
+    const angular2App = React.createElement('my-app', {'[name]': 'custom name'});
+
+
     return (
       <div>
         <header className="header">
@@ -165,6 +168,9 @@ export default class TodoApp extends React.Component {
         </header>
 					{main}
 					{footer}
+        <hr/>
+        <h3>Angular 2 section below</h3>
+        {angular2App}
       </div>
       );
   }
