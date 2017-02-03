@@ -10,12 +10,13 @@
 import { Component, Injectable, Inject, NgZone } from '@angular/core';
 import { TOKEN } from '../appConfig';
 
-class AppComponent {
+export class AppComponent {
     constructor(config, NgZone, name = 'Angular') {
         Object.assign(this, {NgZone, config, name});
     }
 
     ngOnInit() {
+        console.log('oi', this.config.model);
         this.config.model.subscribe(() => this.NgZone.run(() => {
             console.log('model changed');
         }))
@@ -25,7 +26,7 @@ AppComponent.annotations = [
     new Injectable(),
     new Component({
         selector: 'my-app',
-        template: `<h4>Hello {{name}}</h4><p>TODOs model: {{config.model | json}}</p>`
+        template: `<h4>Hello {{name}}</h4><p>TODOs model: {{config.model.todos | json}}</p>`
     })
 ];
 AppComponent.parameters = [
@@ -33,4 +34,3 @@ AppComponent.parameters = [
     [new Inject(NgZone)]
 ];
 
-module.exports = AppComponent;

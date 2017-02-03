@@ -22,7 +22,6 @@ import {CONFIG} from './appConfig';
 
     function bootstrap() {
         render();
-        CONFIG.customKey = 'customValue';
         CONFIG.model = model;
         platformBrowserDynamic().bootstrapModule(AppModule);
     }
